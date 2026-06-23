@@ -4,5 +4,5 @@
     /etc/nixos/hardware-configuration.nix
   ];
 
-  networking.hostName = "lab02";
+  networking.hostName = "lab01";
 }

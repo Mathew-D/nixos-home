@@ -4,13 +4,13 @@
   imports = [
     ./display/greetd.nix
     ./desktop/niri.nix
-    ./desktop/plasma.nix
+   # ./desktop/plasma.nix
     ./users
     ./modules/cli.nix
     ./modules/apps.nix
     ./modules/shell.nix
     ./modules/env.nix
-    ./modules/skel.nix
+   # ./modules/skel.nix
     ./modules/theme.nix
   ];
 

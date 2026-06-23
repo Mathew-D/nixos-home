@@ -3,7 +3,7 @@
 {
   users.users.mdusome = {
     isNormalUser = true;
-    description = "Computer";
+    description = "Main user";
     extraGroups = [ "networkmanager" "wheel" ];
   };
 }

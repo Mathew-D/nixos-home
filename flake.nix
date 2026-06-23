@@ -25,7 +25,7 @@ outputs = { self, nixpkgs, ... }@inputs:
       modules = [ ./hosts/${name}.nix ];
     };
 
-    hosts = [ "lab01" "lab02" ];
+    hosts = [ "main" "forest" ];
   in {
     nixosConfigurations = builtins.listToAttrs (
       map (name: {
