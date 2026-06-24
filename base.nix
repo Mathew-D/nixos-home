@@ -55,6 +55,8 @@ fonts.packages = with pkgs; [
   noto-fonts-color-emoji
   nerd-fonts.roboto-mono
 ];  
+  # Optional but recommended for better app compatibility
+  fonts.fontconfig.enable = true;
 
   # Clean up old generations
   nix.gc = {
