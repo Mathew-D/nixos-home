@@ -21,7 +21,6 @@
      veracrypt
     vesktop
     thunderbird
-    
     libreoffice-fresh
     masterpdfeditor4
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
@@ -30,9 +29,18 @@
     export _JAVA_OPTIONS="--add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED --add-opens=java.desktop/java.awt=ALL-UNNAMED"
     exec ${pkgs.processing}/bin/processing "$@"
   '')
+    #Games
+    lutris
 
   ];
   programs.firefox.enable = true;
-
+  #Gaming
+  programs = {
+    gamemode.enable = true;
+    steam = {
+      enable = true;
+      gamescopeSession.enable = true;
+    };
+  };
 
 }

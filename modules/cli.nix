@@ -34,13 +34,16 @@
     glib
     gtk3
 
-
+    #Graphics
     mesa
     libglvnd
     vulkan-loader
     vulkan-tools
     glxinfo
-    
+
+    #Proton
+    proton-ge-bin
+
     (python314.withPackages (ps: with ps; [
       pyside6
     ]))
