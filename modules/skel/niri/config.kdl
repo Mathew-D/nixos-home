@@ -12,4 +12,4 @@ include "src/misc.kdl"
 include "src/rules.kdl"
 include "src/spawn.kdl"
 
-include "~/.config/niri/noctalia.kdl"
+include optional=true "~/.config/niri/noctalia.kdl"
