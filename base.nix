@@ -36,12 +36,14 @@
   package = pkgs.gnome.gvfs;
 };
 
+  services.gnome.gnome-keyring.enable = true; 
+  #security.polkit.enable = true;
 
   # Bluetooth
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
 
-
+   
   services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
 

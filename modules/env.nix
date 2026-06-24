@@ -5,6 +5,7 @@
   #  _JAVA_OPTIONS =
   #    "--add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED --add-opens=java.desktop/java.awt=ALL-UNNAMED";
     NIXOS_OZONE_WL = "1";
+    MOZ_ENABLE_WAYLAND = "1";
     # future variables
     BROWSER = "firefox";
     #QT_QPA_PLATFORMTHEME="gtk3";

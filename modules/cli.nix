@@ -25,6 +25,7 @@
     wayland-utils
     brightnessctl
     xwayland-satellite # xwayland support
+    gpu-screen-recorder
 
     #Dev Tools
     jdk25
@@ -38,6 +39,7 @@
     libglvnd
     vulkan-loader
     vulkan-tools
+    glxinfo
     
     (python314.withPackages (ps: with ps; [
       pyside6
