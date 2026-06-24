@@ -13,6 +13,10 @@
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
+  rift = {
+    url = "github:Mathew-D/rift-nix";
+  };
+
   noctalia = {
     url = "github:noctalia-dev/noctalia";
     inputs.nixpkgs.follows = "nixpkgs";
@@ -22,7 +26,7 @@
 outputs = { self, nixpkgs, ... }@inputs:
   let
     system = "x86_64-linux";
-
+    
     mkHost = name: nixpkgs.lib.nixosSystem {
       inherit system;
       specialArgs = { inherit inputs; };
