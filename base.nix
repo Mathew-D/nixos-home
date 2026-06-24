@@ -12,6 +12,7 @@
     ./modules/env.nix
    # ./modules/skel.nix
     ./modules/theme.nix
+    inputs.home-manager.nixosModules.home-manager
   ];
 
 # Turn flakes on
@@ -88,5 +89,14 @@ fonts.packages = with pkgs; [
   nixpkgs.config.allowUnfree = true;
 
   system.stateVersion = "26.05";
+
+  # Home Manager configuration
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    users.mdusome = {
+      imports = [ ./home/mdusome.nix ];
+    };
+  };
 }
 
