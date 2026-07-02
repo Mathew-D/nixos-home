@@ -12,7 +12,6 @@
   pkgs.nautilus
   pkgs.nwg-look
   pkgs.foot
-  pkgs.vscode
   pkgs.mpv
   pkgs.mumble
   pkgs.networkmanagerapplet
@@ -25,6 +24,19 @@
   pkgs.masterpdfeditor4
   pkgs.scenebuilder
   pkgs.lutris
+
+ (pkgs.vscode.fhsWithPackages (ps: with ps; [
+     #Rust 
+    libX11
+    libXi
+    libxkbcommon
+    libGL
+
+    #Java
+    libXxf86vm
+    glib
+    libXtst
+    ]))
 
   inputs.noctalia.packages.${pkgs.system}.default
   inputs.rift.packages.x86_64-linux.default
