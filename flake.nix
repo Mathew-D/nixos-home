@@ -1,5 +1,5 @@
 {
-  description = "NixOS system - BHS";
+  description = "NixOS system";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
@@ -15,6 +15,14 @@
 
   rift = {
     url = "github:Mathew-D/rift-nix";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
+  
+  ts3-noweb.url = "github:Jokler/ts3client-noweb-nix";
+  
+  devin = {
+    url = "github:Mathew-D/rift-nix";
+    inputs.nixpkgs.follows = "nixpkgs";
   };
 
   noctalia = {
