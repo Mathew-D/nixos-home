@@ -1,5 +1,25 @@
 {
   "nodes": {
+    "bambustudio": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1783118060,
+        "narHash": "sha256-BJg/qq+O2YR/cxsTAjqLwbSEmIe3vBejVFWJO8UgjUA=",
+        "ref": "refs/heads/main",
+        "rev": "f36491b9b9aa5a65a9db02fd9ba22199f245e784",
+        "revCount": 2,
+        "type": "git",
+        "url": "https://github.com/Mathew-D/bambustudio-nix"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://github.com/Mathew-D/bambustudio-nix"
+      }
+    },
     "devin": {
       "inputs": {
         "nixpkgs": [
@@ -188,6 +208,7 @@
     },
     "root": {
       "inputs": {
+        "bambustudio": "bambustudio",
         "devin": "devin",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",

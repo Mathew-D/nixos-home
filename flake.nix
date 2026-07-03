@@ -17,6 +17,11 @@
     url = "github:Mathew-D/rift-nix";
     inputs.nixpkgs.follows = "nixpkgs";
   };
+
+  bambustudio = {
+    url = "git+https://github.com/Mathew-D/bambustudio-nix";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
   
   pcloud = {
     url = "github:Mathew-D/pcloud-nix";

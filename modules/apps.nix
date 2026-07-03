@@ -44,6 +44,7 @@
   inputs.rift.packages.x86_64-linux.default
   inputs.pcloud.packages.x86_64-linux.default
   inputs.devin.packages.x86_64-linux.default
+  inputs.bambustudio.packages.x86_64-linux.default
   pkgs.teamspeak3
 
   (pkgs.writeShellScriptBin "processing" ''
