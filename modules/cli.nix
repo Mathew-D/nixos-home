@@ -46,7 +46,7 @@
 
     #Proton
     umu-launcher
-    proton-rs
+    protonup-rs
 
     (python314.withPackages (ps: with ps; [
       pyside6
