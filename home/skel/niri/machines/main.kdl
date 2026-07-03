@@ -1,0 +1,50 @@
+// Add our extra named workspace
+//workspace "1" {
+//  open-on-output "DP-1"
+//}
+//workspace "2" {
+//  open-on-output "DP-1"
+//}
+//workspace "3" {
+//  open-on-output "DP-1"
+//}
+
+// Chat software
+workspace "C" {
+  open-on-output "DP-1"
+}
+
+// Video Player output
+workspace "I" {
+  open-on-output "DP-2"
+}
+
+//Email
+workspace "E" {
+  open-on-output "DP-3"
+}
+
+// ===== Outputs =====
+output "DP-3" {
+    mode "3840x2160"
+    scale 1.5
+    position x=0 y=1147
+}
+
+output "DP-2" {
+    mode "2560x1440@165"
+    scale 1
+    position x=2560 y=1147
+}
+
+output "DP-1" {
+    mode "3840x2160"
+    scale 1.5
+    position x=5120 y=1147
+}
+
+output "HDMI-A-1" {
+    mode "1680x1050"
+    scale 1
+    position x=2640 y=97
+}

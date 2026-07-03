@@ -4,5 +4,9 @@
     /etc/nixos/hardware-configuration.nix
   ];
 
-  networking.hostName = "lab01";
+  networking.hostName = "forest";
+
+  home-manager.extraSpecialArgs = {
+    hmHost = "forest";
+  };
 }

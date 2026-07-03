@@ -4,9 +4,9 @@
     /etc/nixos/hardware-configuration.nix
   ];
 
-  networking.hostName = "main";
+  networking.hostName = "laptop";
 
   home-manager.extraSpecialArgs = {
-    hmHost = "main";
+    hmHost = "laptop";
   };
 }

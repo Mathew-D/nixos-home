@@ -26,7 +26,8 @@
     brightnessctl
     xwayland-satellite # xwayland support
     gpu-screen-recorder
-
+    playerctl
+    
     #Dev Tools
     jdk25
     openjfx

@@ -1,9 +1,3 @@
-output "DP-1" {
-    mode "2560x1440@164.554"
-    scale 1
-    position x=0 y=0
-}
-
 include "src/animations.kdl"
 include "src/binds.kdl"
 include "src/input.kdl"
@@ -11,5 +5,5 @@ include "src/layout.kdl"
 include "src/misc.kdl"
 include "src/rules.kdl"
 include "src/spawn.kdl"
-
+include "machines/main.kdl"
 include optional=true "~/.config/niri/noctalia.kdl"
