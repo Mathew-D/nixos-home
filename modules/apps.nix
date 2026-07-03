@@ -4,7 +4,6 @@
  nixpkgs.overlays = [ inputs.ts3-noweb.overlays.default ];
 
  environment.systemPackages = [
-  pkgs.pcloud
   pkgs._1password-gui
   pkgs.corectrl
   pkgs.cryptomator
@@ -26,7 +25,8 @@
   pkgs.masterpdfeditor4
   pkgs.scenebuilder
   pkgs.lutris
-
+  pkgs.pcloud
+  pkgs.gedit
  (pkgs.vscode.fhsWithPackages (ps: with ps; [
      #Rust 
     libX11
@@ -42,6 +42,7 @@
 
   inputs.noctalia.packages.${pkgs.system}.default
   inputs.rift.packages.x86_64-linux.default
+  #inputs.pcloud.packages.x86_64-linux.default
   inputs.devin.packages.x86_64-linux.default
   pkgs.teamspeak3
 

@@ -69,8 +69,22 @@ fonts.packages = with pkgs; [
   i18n.defaultLocale = "en_CA.UTF-8";
 
   #Hardware
-  hardware.graphics.enable = true;
-  hardware.graphics.enable32Bit = true; 
+hardware.graphics = {
+  enable = true;
+  enable32Bit = true;
+
+  extraPackages = with pkgs; [
+    mesa
+    libglvnd
+  ];
+
+  extraPackages32 = with pkgs.pkgsi686Linux; [
+    mesa
+    libglvnd
+  ];
+};
+#  hardware.graphics.enable = true;
+#  hardware.graphics.enable32Bit = true; 
 
   # Printing
   services.printing.enable = true;
@@ -89,6 +103,7 @@ fonts.packages = with pkgs; [
     pulse.enable = true;
   };
   
+programs.fuse.userAllowOther = true;
   programs.nix-ld.enable = true;
 
   nixpkgs.config.allowUnfree = true;

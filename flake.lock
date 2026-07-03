@@ -1,5 +1,64 @@
 {
   "nodes": {
+    "devin": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1783053553,
+        "narHash": "sha256-daoI0orMDyXBrpRQZU8h46Rf9NfR8mmYIpCzGgd7j8c=",
+        "owner": "Mathew-D",
+        "repo": "rift-nix",
+        "rev": "f94a1c3cb39acbe70d22531f7974b70ee78e4f7f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Mathew-D",
+        "repo": "rift-nix",
+        "type": "github"
+      }
+    },
+    "flake-parts": {
+      "inputs": {
+        "nixpkgs-lib": "nixpkgs-lib"
+      },
+      "locked": {
+        "lastModified": 1778716662,
+        "narHash": "sha256-m1Yf0wZ8j1OHjTc2UwHwyQRSnNeSgLJOd7q5Y45hzi4=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "f7c1a2d347e4c52d5fb8d10cb4d94b5884e546fb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
+    "home-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1782704057,
+        "narHash": "sha256-G1I1gd32F7mp9LAe1DaZ4ZL7NX5gyiKwdCMwro1Vrck=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "868d0a692de703c2de98fab61968e4e310b7c28e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "ref": "release-26.05",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1781216227,
@@ -12,6 +71,37 @@
       "original": {
         "owner": "NixOS",
         "ref": "nixos-26.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-lib": {
+      "locked": {
+        "lastModified": 1777168982,
+        "narHash": "sha256-GOkGPcboWE9BmGCRMLX3worL4EMnsnG8MyKmXNeYuhQ=",
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "rev": "f5901329dade4a6ea039af1433fb087bd9c1fe14",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1780243769,
+        "narHash": "sha256-x5UQuRsH3MqI0U9afaXSNqzTPSeZlRLvFAav2Ux1pNw=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "331800de5053fcebacf6813adb5db9c9dca22a0c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -56,11 +146,75 @@
         "type": "github"
       }
     },
+    "pcloud": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1783087610,
+        "narHash": "sha256-7ikWOgcNU8Vf5mBiSletN74ISLmeSu2DbEMRsJEucbY=",
+        "owner": "Mathew-D",
+        "repo": "pcloud-nix",
+        "rev": "bd512b2125fb1398c56c1c7669b605b219f6622d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Mathew-D",
+        "repo": "pcloud-nix",
+        "type": "github"
+      }
+    },
+    "rift": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1783053553,
+        "narHash": "sha256-daoI0orMDyXBrpRQZU8h46Rf9NfR8mmYIpCzGgd7j8c=",
+        "owner": "Mathew-D",
+        "repo": "rift-nix",
+        "rev": "f94a1c3cb39acbe70d22531f7974b70ee78e4f7f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Mathew-D",
+        "repo": "rift-nix",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
+        "devin": "devin",
+        "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "noctalia": "noctalia",
-        "noctalia-greeter": "noctalia-greeter"
+        "noctalia-greeter": "noctalia-greeter",
+        "pcloud": "pcloud",
+        "rift": "rift",
+        "ts3-noweb": "ts3-noweb"
+      }
+    },
+    "ts3-noweb": {
+      "inputs": {
+        "flake-parts": "flake-parts",
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1780783424,
+        "narHash": "sha256-dEfC/DOeTBOuwGR9PnTROt1StJZVbgTvzHrbqW4o5oE=",
+        "owner": "Jokler",
+        "repo": "ts3client-noweb-nix",
+        "rev": "0bc98913c97e83df1b694aa01c2dfe406d687bb2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Jokler",
+        "repo": "ts3client-noweb-nix",
+        "type": "github"
       }
     }
   },

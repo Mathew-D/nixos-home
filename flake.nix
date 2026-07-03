@@ -18,6 +18,11 @@
     inputs.nixpkgs.follows = "nixpkgs";
   };
   
+pcloud = {
+    url = "github:Mathew-D/pcloud-nix";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
+
   ts3-noweb.url = "github:Jokler/ts3client-noweb-nix";
   
   devin = {
