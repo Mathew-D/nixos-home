@@ -4,6 +4,7 @@
  nixpkgs.overlays = [ inputs.ts3-noweb.overlays.default ];
 
  environment.systemPackages = [
+  pkgs.pcloud
   pkgs._1password-gui
   pkgs.corectrl
   pkgs.cryptomator
