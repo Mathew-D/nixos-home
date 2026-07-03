@@ -44,6 +44,7 @@
 
     #Proton
     #proton-ge-bin
+    umu-launcher
 
     (python314.withPackages (ps: with ps; [
       pyside6
