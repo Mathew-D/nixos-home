@@ -9,6 +9,8 @@
     file
     unzip
     zip
+    killall
+    btrfs-progs
 
     # Modern CLI tools
     fd
@@ -43,8 +45,8 @@
     mesa-demos
 
     #Proton
-    #proton-ge-bin
     umu-launcher
+    proton-rs
 
     (python314.withPackages (ps: with ps; [
       pyside6
