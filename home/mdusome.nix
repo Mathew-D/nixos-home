@@ -37,6 +37,7 @@ in {
     "foot/foot.ini".text = builtins.readFile ./skel/foot/foot.ini;
     "foot/dank-colors.ini".text = builtins.readFile ./skel/foot/dank-colors.ini;
     "niri/src/animations.kdl".text = builtins.readFile ./skel/niri/src/animations.kdl;
+    "niri/noctalia.kdl".text = builtins.readFile ./skel/niri/noctalia.kdl;
     "niri/src/input.kdl".text = builtins.readFile ./skel/niri/src/input.kdl;
     "niri/src/layout.kdl".text = builtins.readFile ./skel/niri/src/layout.kdl;
     "niri/src/misc.kdl".text = builtins.readFile ./skel/niri/src/misc.kdl;
