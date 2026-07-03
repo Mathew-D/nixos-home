@@ -75,6 +75,9 @@ fonts.packages = with pkgs; [
   # Printing
   services.printing.enable = true;
 
+  # Use Flatpak for large third-party desktop apps.
+  services.flatpak.enable = true;
+
   # Audio (PipeWire)
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;

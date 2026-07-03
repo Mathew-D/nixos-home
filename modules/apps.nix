@@ -8,7 +8,6 @@
   pkgs.corectrl
   pkgs.cryptomator
   pkgs.chromium
-  pkgs.bambu-studio
   pkgs.celluloid
   pkgs.eog
   pkgs.nautilus
