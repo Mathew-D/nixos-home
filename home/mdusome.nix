@@ -12,10 +12,8 @@ in {
 
   programs.git = {
     enable = true;
-    user = {
-      name = "Mathew-D";
-    email = "mathew_dusome@kprdsb.ca";
-    };
+    userName = "Mathew-D";
+    userEmail = "mathew_dusome@kprdsb.ca";
   };
 
   programs.home-manager.enable = true;
