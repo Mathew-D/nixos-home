@@ -43,7 +43,7 @@
     mesa-demos
 
     #Proton
-    proton-ge-bin
+    #proton-ge-bin
 
     (python314.withPackages (ps: with ps; [
       pyside6

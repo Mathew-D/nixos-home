@@ -49,7 +49,7 @@
     exec ${pkgs.processing}/bin/processing "$@"
   '')
 ];
-
+programs.noctalia.enable = true;
   programs.firefox.enable = true;
   #Gaming
   programs = {
