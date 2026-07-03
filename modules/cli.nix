@@ -40,7 +40,7 @@
     libglvnd
     vulkan-loader
     vulkan-tools
-    glxinfo
+    mesa-demos
 
     #Proton
     proton-ge-bin

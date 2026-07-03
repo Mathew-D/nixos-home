@@ -1,6 +1,8 @@
 { pkgs, inputs, ... }:
 
 {
+ nixpkgs.overlays = [ inputs.ts3-noweb.overlays.default ];
+
  environment.systemPackages = [
   pkgs._1password-gui
   pkgs.corectrl
@@ -41,7 +43,7 @@
   inputs.noctalia.packages.${pkgs.system}.default
   inputs.rift.packages.x86_64-linux.default
   inputs.devin.packages.x86_64-linux.default
-  inputs.ts3-noweb.packages.x86_64-linux.default
+  pkgs.teamspeak3
 
   (pkgs.writeShellScriptBin "processing" ''
     export _JAVA_OPTIONS="--add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED --add-opens=java.desktop/java.awt=ALL-UNNAMED"
