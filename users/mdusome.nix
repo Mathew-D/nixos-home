@@ -10,6 +10,7 @@
       "networkmanager"
       "video"
       "wheel"
+      "gamemode"
     ];
     shell = pkgs.fish;
   };
