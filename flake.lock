@@ -153,11 +153,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1783087610,
-        "narHash": "sha256-7ikWOgcNU8Vf5mBiSletN74ISLmeSu2DbEMRsJEucbY=",
+        "lastModified": 1783097999,
+        "narHash": "sha256-96DmeykZVPKcRkoRxWFVqRjJKDEgQ98QUgah26gR9tI=",
         "owner": "Mathew-D",
         "repo": "pcloud-nix",
-        "rev": "bd512b2125fb1398c56c1c7669b605b219f6622d",
+        "rev": "04b80f98a498ce66b4b08cd6fce15f1a6ddaff3d",
         "type": "github"
       },
       "original": {

@@ -18,7 +18,7 @@
     inputs.nixpkgs.follows = "nixpkgs";
   };
   
-pcloud = {
+  pcloud = {
     url = "github:Mathew-D/pcloud-nix";
     inputs.nixpkgs.follows = "nixpkgs";
   };

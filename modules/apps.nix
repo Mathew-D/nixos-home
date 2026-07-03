@@ -25,7 +25,7 @@
   pkgs.masterpdfeditor4
   pkgs.scenebuilder
   pkgs.lutris
-  pkgs.pcloud
+  #pkgs.pcloud
   pkgs.gedit
  (pkgs.vscode.fhsWithPackages (ps: with ps; [
      #Rust 
@@ -42,7 +42,7 @@
 
   inputs.noctalia.packages.${pkgs.system}.default
   inputs.rift.packages.x86_64-linux.default
-  #inputs.pcloud.packages.x86_64-linux.default
+  inputs.pcloud.packages.x86_64-linux.default
   inputs.devin.packages.x86_64-linux.default
   pkgs.teamspeak3
 
