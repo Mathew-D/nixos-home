@@ -10,6 +10,7 @@
     unzip
     zip
     killall
+    procps
     btrfs-progs
 
     # Modern CLI tools
