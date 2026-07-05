@@ -21,7 +21,6 @@
   pkgs.vesktop
   pkgs.thunderbird
   pkgs.libreoffice-fresh
-
   pkgs.scenebuilder
   pkgs.lutris
   #pkgs.pcloud
