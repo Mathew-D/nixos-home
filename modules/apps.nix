@@ -18,7 +18,6 @@
   pkgs.networkmanagerapplet
   pkgs.qbittorrent
   pkgs.pywalfox-native
-  pkgs.veracrypt
   pkgs.vesktop
   pkgs.thunderbird
   pkgs.libreoffice-fresh
@@ -27,6 +26,21 @@
   pkgs.lutris
   #pkgs.pcloud
   pkgs.gedit
+ 
+  (pkgs.veracrypt.overrideAttrs (old: {
+    postFixup = (old.postFixup or "") + ''
+      # Install a PNG icon so launchers can use theme lookup instead of VeraCrypt's XPM.
+      install -d "$out/share/icons/hicolor/256x256/apps"
+      ${pkgs.imagemagick}/bin/convert \
+        "$out/share/pixmaps/veracrypt.xpm" \
+        "$out/share/icons/hicolor/256x256/apps/veracrypt.png"
+
+      substituteInPlace "$out/share/applications/veracrypt.desktop" \
+        --replace-fail "Icon=veracrypt.xpm" "Icon=veracrypt"
+    '';
+  }))
+ 
+ 
  (pkgs.vscode.fhsWithPackages (ps: with ps; [
      #Rust 
     libX11
