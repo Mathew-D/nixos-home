@@ -30,6 +30,7 @@
     xwayland-satellite # xwayland support
     gpu-screen-recorder
     playerctl
+    wireguard-tools
     
     #Dev Tools
     jdk25
