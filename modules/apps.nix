@@ -21,7 +21,7 @@
   pkgs.vesktop
   pkgs.thunderbird
   pkgs.libreoffice-fresh
-  pkgs.masterpdfeditor4
+
   pkgs.scenebuilder
   pkgs.lutris
   #pkgs.pcloud
@@ -40,7 +40,14 @@
     '';
   }))
  
- 
+    (pkgs.masterpdfeditor4.overrideAttrs (old: {
+    postFixup = (old.postFixup or "") + ''
+      substituteInPlace "$out/share/applications/masterpdfeditor4.desktop" \
+        --replace-fail "Icon=masterpdfeditor4/masterpdfeditor4.png" "Icon=masterpdfeditor4"
+    '';
+  }))
+
+
  (pkgs.vscode.fhsWithPackages (ps: with ps; [
      #Rust 
     libX11
