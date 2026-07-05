@@ -103,7 +103,8 @@ hardware.graphics = {
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-  
+
+services.accounts-daemon.enable = true;
 programs.fuse.userAllowOther = true;
   programs.nix-ld.enable = true;
 
