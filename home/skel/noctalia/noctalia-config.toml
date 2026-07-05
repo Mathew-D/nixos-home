@@ -178,7 +178,6 @@ position = "top_right"
     media = false
 
 [shell]
-avatar_path = "/home/mdusome/face.png"
 clipboard_auto_paste = "off"
 clipboard_confirm_clear_history = false
 clipboard_image_action_command = "satty -f -"
@@ -249,23 +248,6 @@ wallpaper_scheme = "m3-content"
 [wallpaper]
 directory = "/home/mdusome/images"
 
-    [wallpaper.automation]
-    order = "random"
-
-    [wallpaper.last]
-    path = "/home/mdusome/images/bg-3.jpg"
-
-    [wallpaper.monitors.DP-1]
-    path = "/home/mdusome/images/bg6.jpg"
-
-    [wallpaper.monitors.DP-2]
-    path = "/home/mdusome/images/bg-2.jpg"
-
-    [wallpaper.monitors.DP-3]
-    path = "/home/mdusome/images/bg-3.jpg"
-
-    [wallpaper.monitors.HDMI-A-1]
-    path = "/home/mdusome/images/bg5.jpg"
 
 [weather]
 address = "Bowmanville, Canada"
