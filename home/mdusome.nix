@@ -49,9 +49,4 @@ in {
     "gtk-3.0/gtk.css".text = builtins.readFile ./skel/gtk-3.0/gtk.css;
     "gtk-3.0/settings.ini".text = builtins.readFile ./skel/gtk-3.0/settings.ini;
   };
-
-  home.file."images" = {
-    source = ./skel/images;
-    recursive = true;
-  };
 }
