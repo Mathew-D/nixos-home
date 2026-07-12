@@ -26,8 +26,8 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # Latest kernel
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # CachyOS kernel from Chaotic Nyx
+  boot.kernelPackages = pkgs.linuxPackages_cachyos;
 
   #Networking
   networking.networkmanager.enable = true;
