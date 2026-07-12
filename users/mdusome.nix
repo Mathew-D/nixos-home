@@ -10,7 +10,6 @@
       "networkmanager"
       "video"
       "wheel"
-      "gamemode"
 	"fuse"
     ];
     shell = pkgs.fish;

@@ -74,9 +74,9 @@
 ];
 #programs.noctalia.enable = true;
   programs.firefox.enable = true;
+
   #Gaming
   programs = {
-    gamemode.enable = true;
     steam = {
       enable = true;
       gamescopeSession.enable = true;
