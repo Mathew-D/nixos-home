@@ -57,9 +57,7 @@ outputs = { self, nixpkgs, chaotic, ... }@inputs:
       specialArgs = { inherit inputs; };
       modules = [
         ./hosts/${name}.nix
-         chaotic.nixosModules.nyx-cache
-          chaotic.nixosModules.nyx-overlay
-          chaotic.nixosModules.nyx-registry
+        chaotic.nixosModules.default
       ];
     };
 

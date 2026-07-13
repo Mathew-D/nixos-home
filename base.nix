@@ -15,11 +15,25 @@
     inputs.home-manager.nixosModules.home-manager
   ];
 
-# Turn flakes on
- nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
+# Turn flakes on and trust third-party binary caches.
+ nix.settings = {
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+    substituters = [
+      "https://cache.nixos.org/"
+      "https://nyx-cache.chaotic.cx/"
+      "https://noctalia.cachix.org"
+    ];
+    trusted-public-keys = [
+      "nyx-cache.chaotic.cx:dJxTrgMC3V3cFfyIiBQDQorG6k1LsqurH/srpMSq7qk="
+      "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+    ];
+  };
+
+  # Keep Chaotic binary cache enabled for cachyos packages.
+  chaotic.nyx.cache.enable = true;
 
 
   # Bootloader
