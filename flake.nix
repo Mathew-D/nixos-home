@@ -48,7 +48,7 @@
   };
   };
 
-outputs = { self, nixpkgs, ... }@inputs:
+outputs = { self, nixpkgs, chaotic, ... }@inputs:
   let
     system = "x86_64-linux";
     
@@ -57,9 +57,9 @@ outputs = { self, nixpkgs, ... }@inputs:
       specialArgs = { inherit inputs; };
       modules = [
         ./hosts/${name}.nix
-        inputs.chaotic.nixosModules.nyx-cache
-        inputs.chaotic.nixosModules.nyx-overlay
-        inputs.chaotic.nixosModules.nyx-registry
+         chaotic.nixosModules.nyx-cache
+          chaotic.nixosModules.nyx-overlay
+          chaotic.nixosModules.nyx-registry
       ];
     };
 
