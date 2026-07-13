@@ -56,9 +56,16 @@
         power-profiles-daemon
         systemd
         gnugrep
+      libnotify
       ];
       text = ''
         # Helper script to enable the performance profile with Proton or others.
+      notify() {
+        if command -v notify-send >/dev/null 2>&1; then
+          notify-send -a "game-performance" "$1" "$2"
+        fi
+      }
+
         if ! command -v powerprofilesctl >/dev/null 2>&1; then
             echo "Error: powerprofilesctl not found" >&2
             exit 1
@@ -66,18 +73,25 @@
 
         # Don't fail if the CPU driver doesn't support performance profile.
         if ! powerprofilesctl list | grep -q 'performance:'; then
+        notify "Game Performance" "Performance profile not supported; launching normally."
             exec "$@"
         fi
 
         # Set performance profile while the game is running.
+      notify "Game Performance" "Performance mode enabled."
+
         if [ -n "$GAME_PERFORMANCE_SCREENSAVER_ON" ]; then
-            exec powerprofilesctl launch -p performance \
+        powerprofilesctl launch -p performance \
                 -r "Launched with CachyOS game-performance utility" -- "$@"
         else
-            exec systemd-inhibit --why "CachyOS game-performance is running" \
+        systemd-inhibit --why "CachyOS game-performance is running" \
                 powerprofilesctl launch -p performance \
                 -r "Launched with CachyOS game-performance utility" -- "$@"
         fi
+
+      status=$?
+      notify "Game Performance" "Performance mode disabled."
+      exit "$status"
       '';
     })
 
