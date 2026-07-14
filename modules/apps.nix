@@ -25,7 +25,8 @@
   pkgs.lutris
   #pkgs.pcloud
   pkgs.gedit
- 
+  pkgs.gnome-disk-utility
+  
   (pkgs.veracrypt.overrideAttrs (old: {
     postFixup = (old.postFixup or "") + ''
       # Install a PNG icon so launchers can use theme lookup instead of VeraCrypt's XPM.
