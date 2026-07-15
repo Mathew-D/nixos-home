@@ -31,6 +31,7 @@
     gpu-screen-recorder
     playerctl
     wireguard-tools
+    pciutils
     
     #Dev Tools
     jdk25
