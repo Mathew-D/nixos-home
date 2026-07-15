@@ -26,7 +26,7 @@ binds {
     // Basic Apps
     Mod+T hotkey-overlay-title="Open Terminal" { spawn "foot"; }
     Mod+Return hotkey-overlay-title="Open Terminal" { spawn "foot"; }
-    Mod+E         { spawn "nemo"; }
+    Mod+E         { spawn "nemo" "--existing-window" ; }
     Mod+C         { spawn "code"; }
     Mod+B         { spawn-sh "firefox"; }
 
