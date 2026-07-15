@@ -10,7 +10,7 @@
   pkgs.chromium
   pkgs.celluloid
   pkgs.loupe
-  #pkgs.eog
+  #pkgs.eog #replaced with loupe
   pkgs.nautilus
   pkgs.nwg-look
   pkgs.foot
