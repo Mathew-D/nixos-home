@@ -9,7 +9,8 @@
   pkgs.cryptomator
   pkgs.chromium
   pkgs.celluloid
-  pkgs.eog
+  pkgs.loupe
+  #pkgs.eog
   pkgs.nautilus
   pkgs.nwg-look
   pkgs.foot
@@ -61,7 +62,7 @@
     libXtst
     ]))
 
-  inputs.noctalia.packages.${pkgs.system}.default
+  inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
   inputs.rift.packages.x86_64-linux.default
   inputs.pcloud.packages.x86_64-linux.default
   inputs.devin.packages.x86_64-linux.default
