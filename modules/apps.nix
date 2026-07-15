@@ -11,7 +11,7 @@
   pkgs.celluloid
   pkgs.loupe
   #pkgs.eog #replaced with loupe
-  pkgs.nautilus
+  pkgs.nemo-with-extensions
   pkgs.nwg-look
   pkgs.foot
   pkgs.mpv
