@@ -63,6 +63,8 @@
   services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
 
+  services.speechd.enable = false;
+
   # Fonts
 fonts.packages = with pkgs; [
   noto-fonts
