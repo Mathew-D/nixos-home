@@ -49,11 +49,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1784932877,
-        "narHash": "sha256-OQuT13IDL2f1SB8pNkJ80Qf8NsEePpJxzsH9uGV332c=",
+        "lastModified": 1784934691,
+        "narHash": "sha256-ZsBe0lNcC51lBleb55m3xvTPYNvIA/ekzUj2pQTMUkY=",
         "owner": "Mathew-D",
         "repo": "devin-desktop-nix",
-        "rev": "3d28835557c560069215365066cb15661e37470d",
+        "rev": "34e7bf69a33109dddd2c701ac54a568cbcc43176",
         "type": "github"
       },
       "original": {
@@ -217,11 +217,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1784925811,
-        "narHash": "sha256-bi9hKFIoxSEVe3JA1O626ret/UqNuQH6b/3RgRFWRwY=",
+        "lastModified": 1784933872,
+        "narHash": "sha256-pMzCF1qW+SCaNYIUPlhvY04Mh9g+y25eueCArURJVdE=",
         "owner": "noctalia-dev",
         "repo": "noctalia",
-        "rev": "128e48bcfefffb48ab7854c4dce7b7fbb1c65eda",
+        "rev": "f393b978b98f3bfd0a8312f178769e75651f473c",
         "type": "github"
       },
       "original": {
