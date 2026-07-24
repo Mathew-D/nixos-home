@@ -1,7 +1,7 @@
 { config, pkgs, ... }: {
   imports = [
-    ../base.nix
-    /etc/nixos/hardware-configuration.nix
+    ../../base.nix
+    ./hardware-configuration.nix
   ];
 
   networking.hostName = "forest";

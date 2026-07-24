@@ -39,7 +39,7 @@
   ts3-noweb.url = "github:Jokler/ts3client-noweb-nix";
   
   devin = {
-    url = "github:Mathew-D/rift-nix";
+     url = "github:Mathew-D/devin-desktop-nix";
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
@@ -56,7 +56,7 @@ outputs = { self, nixpkgs, chaotic, ... }@inputs:
       inherit system;
       specialArgs = { inherit inputs; };
       modules = [
-        ./hosts/${name}.nix
+        ./hosts/${name}/default.nix
         chaotic.nixosModules.default
       ];
     };

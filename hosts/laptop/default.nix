@@ -12,7 +12,7 @@ in
 
 {
   imports = [
-    ../base.nix
+    ../../base.nix
     /etc/nixos/hardware-configuration.nix
   ];
 
