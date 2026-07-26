@@ -49,11 +49,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1784934691,
-        "narHash": "sha256-ZsBe0lNcC51lBleb55m3xvTPYNvIA/ekzUj2pQTMUkY=",
+        "lastModified": 1784931220,
+        "narHash": "sha256-nLsoFdI650fuXoehzNjl5gPkaL9ODKyucmJacnkK/ns=",
         "owner": "Mathew-D",
         "repo": "devin-desktop-nix",
-        "rev": "34e7bf69a33109dddd2c701ac54a568cbcc43176",
+        "rev": "8fd1ea1ef4299eed6470a9560942bae650d6f008",
         "type": "github"
       },
       "original": {

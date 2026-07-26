@@ -39,6 +39,7 @@
   # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.systemd-boot.configurationLimit = 10;
 
   # CachyOS kernel from Chaotic Nyx
   boot.kernelPackages = pkgs.linuxPackages_cachyos;
@@ -79,7 +80,7 @@ fonts.packages = with pkgs; [
   nix.gc = {
   automatic = true;
   dates = "weekly";
-  options = "--delete-older-than 30d";
+  options = "--delete-older-than 14d";
 };
 
   time.timeZone = "America/Toronto";
