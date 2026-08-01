@@ -47,6 +47,12 @@
     vulkan-tools
     mesa-demos
 
+    # PDF and OCR tools
+    poppler-utils
+    ocrmypdf
+    tesseract
+    imagemagick
+    
     #Proton
     umu-launcher
     protonup-rs
