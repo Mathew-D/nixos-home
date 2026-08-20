@@ -2,17 +2,13 @@
 order = [ "Main" ]
 
     [bar.Main]
-    attach_panels = true
     background_opacity = 0.66999995708465576
-    capsule_groups = [ "Monitoring", "Sound" ]
     capsule_opacity = 0.0
     center = [ "active_window", "media" ]
     contact_shadow = true
     end = [ "tray", "group:g1", "notifications", "clipboard", "group:g2", "network", "caffeine", "clock", "control-center" ]
     margin_edge = 5
     margin_ends = 0
-    margin_h = 0
-    margin_v = 0
     padding = 12
     reserve_space = true
     scale = 1.2000000476837158
@@ -42,7 +38,6 @@ warning_threshold = 55
 enabled = true
 
 [control_center]
-compact = false
 sidebar = "full"
 sidebar_section = "full"
 
@@ -168,9 +163,6 @@ widget_order = [
         input_radius = 6.0
         show_login_button = true
 
-[noctalia_state]
-setup_wizard_completed = true
-
 [osd]
 position = "top_right"
 
@@ -191,8 +183,6 @@ telemetry_enabled = true
 time_format = "{:%-I:%M %p}"
 
     [shell.panel]
-    attach_clipboard = true
-    attach_wallpaper = false
     control_center_placement = "floating"
     session_placement = "centered"
     transparency_mode = "glass"
@@ -250,10 +240,8 @@ directory = "/home/mdusome/images"
 
 
 [weather]
-address = "Bowmanville, Canada"
 
 [widget.battery]
-capsule_group = "Monitoring"
 device = "/org/freedesktop/UPower/devices/battery_hidpp_battery_0"
 
 [widget.clock]
@@ -261,16 +249,14 @@ format = "{:%a, %b %-d  %-I:%M %p }"
 vertical_format = "{:%a, %b %-d \\n %-I:%M %p }"
 
 [widget.cpu]
-capsule_group = "Monitoring"
 highlight_color = "on_surface"
-show_label = false
+show_value = false
 
 [widget.gpu-usage]
 stat = "gpu_usage"
 type = "sysmon"
 
 [widget.input_volume]
-capsule_group = "Sound"
 show_label = false
 
 [widget.launcher]
@@ -281,9 +267,8 @@ scale = 1.25
 show_label = false
 
 [widget.ram]
-capsule_group = "Monitoring"
 highlight_color = "on_surface"
-show_label = false
+show_value = false
 
 [widget.taskbar]
 anchor = false
@@ -293,16 +278,15 @@ workspace_group_capsule = true
 
 [widget.temp]
 capsule = true
-capsule_group = "Monitoring"
 highlight_color = "on_surface"
-show_label = false
+show_value = false
 
 [widget.volume]
-capsule_group = "Sound"
 show_label = false
 
 [widget.workspaces]
 anchor = false
 capsule = false
-display = "name"
+label_source = "name"
+show_labels = true
 empty_color = "tertiary"
