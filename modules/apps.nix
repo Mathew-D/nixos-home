@@ -16,7 +16,11 @@
   pkgs.foot
   pkgs.mpv
   pkgs.mumble
-  pkgs.networkmanagerapplet
+  (pkgs.networkmanagerapplet.overrideAttrs (old: {
+    postFixup = (old.postFixup or "") + ''
+      rm -f "$out/etc/xdg/autostart/nm-applet.desktop"
+    '';
+  }))
   pkgs.qbittorrent
   pkgs.pywalfox-native
   pkgs.vesktop
