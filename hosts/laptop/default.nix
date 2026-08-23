@@ -18,8 +18,7 @@ in
 
   networking.hostName = "laptop";
 
-#  services.iio-sensor-proxy.enable = true;
-  services.fprintd.enable = true;
+#  services.fprintd.enable = true;
   services.thermald.enable = true;
 
 #  hardware.enableAllFirmware = true;
