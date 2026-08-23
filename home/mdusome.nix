@@ -56,6 +56,7 @@ in {
       "video/x-flv" = [ "mpc-qt.desktop" ];
       "video/vnd.avi" = [ "mpc-qt.desktop" ];
       "inode/directory" = [ "nemo.desktop" ];
+      "inode/mount-point" = [ "nemo.desktop" ];
       "x-scheme-handler/file" = [ "nemo.desktop" ];
       "x-scheme-handler/discord" = [ "vesktop.desktop" ];
       "application/x-wayland-gnome-saved-search" = [ "nemo.desktop" ];
@@ -87,6 +88,7 @@ in {
 
     associations.added = {
       "inode/directory" = [ "nemo.desktop" ];
+      "inode/mount-point" = [ "nemo.desktop" ];
       "x-scheme-handler/file" = [ "nemo.desktop" ];
       "x-scheme-handler/mailto" = [ "userapp-Thunderbird-DJ0RQ2.desktop" ];
       "x-scheme-handler/mid" = [ "userapp-Thunderbird-DJ0RQ2.desktop" ];
