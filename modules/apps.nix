@@ -31,6 +31,7 @@
   #pkgs.pcloud
   pkgs.gedit
   pkgs.gnome-disk-utility
+  pkgs.librewolf
   
   (pkgs.veracrypt.overrideAttrs (old: {
     postFixup = (old.postFixup or "") + ''
