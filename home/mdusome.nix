@@ -139,6 +139,14 @@ in {
     style.name = "adwaita";
   };
 
+programs.mpv = {
+  enable = true;
+  scripts = [
+    pkgs.mpvScripts.mpris
+  ];
+};
+
+
   # XDG configuration files (converted from skel)
   xdg.configFile = {
     "foot/foot.ini".text = builtins.readFile ./skel/foot/foot.ini;

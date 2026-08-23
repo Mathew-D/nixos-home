@@ -36,6 +36,7 @@ in
     playerctl
     wireguard-tools
     pciutils
+    mpvScripts.mpris
     
     #Dev Tools
     jdk25
