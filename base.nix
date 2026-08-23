@@ -94,11 +94,18 @@ hardware.graphics = {
   extraPackages = with pkgs; [
     mesa
     libglvnd
+    intel-media-driver
+    intel-vaapi-driver
+    libva-vdpau-driver
+    libvdpau-va-gl
   ];
 
   extraPackages32 = with pkgs.pkgsi686Linux; [
     mesa
     libglvnd
+    intel-vaapi-driver
+    libva-vdpau-driver
+    libvdpau-va-gl
   ];
 };
 #  hardware.graphics.enable = true;

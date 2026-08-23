@@ -38,6 +38,7 @@ in
     pciutils
     mpvScripts.mpris
     
+    
     #Dev Tools
     jdk25
     openjfx
@@ -51,6 +52,7 @@ in
     vulkan-loader
     vulkan-tools
     mesa-demos
+    libva-utils
 
     # PDF and OCR tools
     poppler-utils
