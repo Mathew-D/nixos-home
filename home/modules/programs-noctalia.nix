@@ -288,6 +288,35 @@
           format = "{:%a, %b %-d  %-I:%M %p }";
           vertical_format = "{:%a, %b %-d \\n %-I:%M %p }";
         };
+
+        cpu = {
+          show_value = false;
+        };
+
+        input_volume = {
+          show_label = false;
+        };
+
+        network = {
+          show_label = false;
+        };
+
+        ram = {
+          show_value = false;
+        };
+
+        taskbar = {
+          group_by_workspace = true;
+          workspace_label_placement = "centered";
+        };
+
+        temp = {
+          show_value = false;
+        };
+
+        volume = {
+          show_label = false;
+        };
       };
     };
   };
