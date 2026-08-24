@@ -28,6 +28,12 @@ in
   '';
 
   hardware.firmware = lib.optional hasLocalIshFirmware ish-fw;
+swapDevices = [
+    {
+      device = "/swapfile";
+      size = 32 * 1024;
+    }
+  ];
 
   environment.systemPackages = with pkgs; [
     iio-sensor-proxy
