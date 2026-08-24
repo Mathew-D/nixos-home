@@ -10,7 +10,6 @@
     ./modules/apps.nix
     ./modules/shell.nix
     ./modules/env.nix
-  # ./modules/skel.nix
     ./modules/theme.nix
     inputs.home-manager.nixosModules.home-manager
   ];
