@@ -6,7 +6,7 @@
       main = {
         term = "foot";
         "resize-delay-ms" = 50;
-        font = "RobotoMono Nerd Font Mono:size=12";
+        font = "RobotoMono Nerd Font Mono:size=14";
         "selection-target" = "clipboard";
         include = "~/.config/foot/themes/noctalia";
         shell = "/run/current-system/sw/bin/fish";

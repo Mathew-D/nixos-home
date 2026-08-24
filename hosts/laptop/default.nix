@@ -17,8 +17,11 @@ in
   ];
 
   networking.hostName = "laptop";
-
-#  services.fprintd.enable = true;
+  #services.fprintd.enable = true;
+  # Run fprintd for Noctalia lockscreen fingerprint support without
+  # enabling pam_fprintd across all PAM services.
+  services.dbus.packages = [ pkgs.fprintd ];
+  systemd.packages = [ pkgs.fprintd ];
   services.thermald.enable = true;
 
 #  hardware.enableAllFirmware = true;
@@ -36,6 +39,7 @@ swapDevices = [
   ];
 
   environment.systemPackages = with pkgs; [
+    fprintd
     iio-sensor-proxy
   ];
 
