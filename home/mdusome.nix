@@ -9,6 +9,7 @@ in {
     ./modules/dconf.nix
     ./modules/xdg-mime.nix
     ./modules/theme.nix
+   # ./modules/programs-umbriel.nix
     ./modules/programs-noctalia.nix
     ./modules/programs-foot.nix
     ./modules/programs-mpv.nix

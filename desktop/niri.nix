@@ -12,8 +12,6 @@ programs.niri.enable = true;
         xdg-desktop-portal-wlr
     ];
 
-    config.common.default = "gtk";
-
 };
 }
 

@@ -4,6 +4,7 @@
   imports = [
     ./display/greetd.nix
     ./desktop/niri.nix
+   # ./desktop/umbriel.nix
    # ./desktop/plasma.nix
     ./users
     ./modules/cli.nix

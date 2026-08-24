@@ -37,6 +37,16 @@
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
+  umbriel = {
+    url = "git+https://github.com/noctalia-dev/umbriel";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
+
+  xdg-desktop-portal-umbriel = {
+    url = "github:noctalia-dev/xdg-desktop-portal-umbriel";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
+
   ts3-noweb.url = "github:Jokler/ts3client-noweb-nix";
   
   devin = {
