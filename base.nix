@@ -137,6 +137,9 @@ programs.fuse.userAllowOther = true;
 
   # Home Manager configuration
   home-manager = {
+    extraSpecialArgs = {
+      inherit inputs;
+    };
     useGlobalPkgs = true;
     useUserPackages = true;
     users.mdusome = {

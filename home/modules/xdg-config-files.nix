@@ -10,6 +10,5 @@
     "niri/src/layout.kdl".text = builtins.readFile ../skel/niri/src/layout.kdl;
     "niri/src/misc.kdl".text = builtins.readFile ../skel/niri/src/misc.kdl;
     "niri/src/spawn.kdl".text = builtins.readFile ../skel/niri/src/spawn.kdl;
-    "noctalia/noctalia-config.toml".text = builtins.readFile ../skel/noctalia/noctalia-config.toml;
   };
 }

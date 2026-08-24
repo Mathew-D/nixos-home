@@ -67,7 +67,6 @@
     libXtst
     ]))
 
-  inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
   inputs.rift.packages.x86_64-linux.default
   inputs.pcloud.packages.x86_64-linux.default
   inputs.devin.packages.x86_64-linux.default
