@@ -299,6 +299,7 @@
 
         network = {
           show_label = false;
+          vpn_status = "both";
         };
 
         ram = {
