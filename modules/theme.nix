@@ -7,5 +7,6 @@
     adwaita-icon-theme
     qogir-theme
     pkgs.pywalfox-native
+    phinger-cursors
   ];
 }
