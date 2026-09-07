@@ -14,6 +14,7 @@ in
   imports = [
     ../../base.nix
     ./hardware-configuration.nix
+    ../../users/school.nix
   ];
 
   networking.hostName = "laptop";
@@ -45,5 +46,9 @@ swapDevices = [
 
   home-manager.extraSpecialArgs = {
     hmHost = "laptop";
+  };
+
+  home-manager.users.school = {
+    imports = [ ../../home/school.nix ];
   };
 }
