@@ -24,6 +24,12 @@ in
   services.dbus.packages = [ pkgs.fprintd ];
   systemd.packages = [ pkgs.fprintd ];
   services.thermald.enable = true;
+  services.logind.settings.Login = {
+    # Ignore false hall-sensor triggers from the magnetic pen attachment.
+    HandleLidSwitch = "ignore";
+    HandleLidSwitchExternalPower = "ignore";
+    HandleLidSwitchDocked = "ignore";
+  };
 
 #  hardware.enableAllFirmware = true;
 

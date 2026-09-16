@@ -21,6 +21,10 @@
       "nix-command"
       "flakes"
     ];
+    trusted-users = [
+      "root"
+      "mdusome"
+    ];
     substituters = [
       "https://cache.nixos.org/"
       "https://nyx-cache.chaotic.cx/"
