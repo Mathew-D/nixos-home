@@ -37,6 +37,8 @@ in
     wireguard-tools
     pciutils
     mpvScripts.mpris
+    wl-mirror
+    jq
     
     
     #Dev Tools

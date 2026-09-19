@@ -23,6 +23,9 @@ binds {
     XF86AudioPlay               allow-when-locked=true { spawn "playerctl" "play-pause"; }
     XF86AudioPrev               allow-when-locked=true { spawn "playerctl" "previous"; }
     XF86AudioNext               allow-when-locked=true { spawn "playerctl" "next"; }
+Mod+Alt+P repeat=false {
+        spawn-sh "wl-mirror --fullscreen-output DP-1 eDP-1";
+    }
 
     // Basic Apps
     Mod+T hotkey-overlay-title="Open Terminal" { spawn "foot"; }
@@ -138,7 +141,7 @@ binds {
     //Mod+5 { focus-workspace 5; } // On purpose so we can access the extra workspace but not name it.
     //Mod+6 { focus-workspace "6"; }
     //Mod+7 { focus-workspace "7"; }
-
+Mod+Shift+Ctrl+1 { move-window-to-monitor "eDP-1"; }
     //Mod+Shift+1 { move-column-to-workspace "1"; }
     //Mod+Shift+2 { move-column-to-workspace "2"; }
     //Mod+Shift+3 { move-column-to-workspace "3"; }

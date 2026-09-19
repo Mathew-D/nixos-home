@@ -21,11 +21,17 @@ input {
     }
   }
 
-  touchpad {
+//  touchpad {
   //  tap
   //  natural-scroll
-  }
+//  }
+ tablet {
+        map-to-output "eDP-1"
+    }
 
+    touch {
+        map-to-output "eDP-1"
+    }
   mouse {
   }
 

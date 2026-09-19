@@ -10,19 +10,19 @@
 //}
 
 // Chat software
-workspace "C" {
-  open-on-output "DP-1"
-}
+//workspace "C" {
+//  open-on-output "eDP-1"
+//}
 
 // Video Player output
-workspace "I" {
-  open-on-output "DP-2"
-}
+//workspace "I" {
+//  open-on-output "eDP-1"
+//}
 
 //Email
-workspace "E" {
-  open-on-output "DP-3"
-}
+//workspace "E" {
+//  open-on-output "eDP-1"
+//}
 
 // ===== Outputs =====
 
