@@ -24,6 +24,7 @@
   pkgs.qbittorrent
   pkgs.pywalfox-native
   pkgs.vesktop
+  pkgs.wdisplays
   pkgs.thunderbird
   pkgs.libreoffice-fresh
   pkgs.scenebuilder

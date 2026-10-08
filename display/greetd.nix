@@ -25,6 +25,9 @@ services.displayManager.noctalia-greeter = {
       theme = "Adwaita";
       size = 24;
     };
+    clock = {
+      time_format = "{:%I:%M %p}";
+    };
   };
 };
 }
