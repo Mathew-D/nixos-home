@@ -62,7 +62,24 @@
 outputs = { self, nixpkgs, chaotic, ... }@inputs:
   let
     system = "x86_64-linux";
-    
+    pkgs = import nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
+    };
+
+    runtimeLibs = with pkgs; [
+      libX11
+      libXi
+      libxkbcommon
+      libGL
+      wayland
+      vulkan-loader
+      libXxf86vm
+      glib
+      libXtst
+      dbus
+    ];
+
     mkHost = name: nixpkgs.lib.nixosSystem {
       inherit system;
       specialArgs = { inherit inputs; };
@@ -74,6 +91,38 @@ outputs = { self, nixpkgs, chaotic, ... }@inputs:
 
     hosts = [ "main" "forest" "laptop" ];
   in {
+    devShells.${system}.default = pkgs.mkShell {
+      name = "coding-env";
+
+      packages = with pkgs; [
+        git
+        gcc
+        gnumake
+        cmake
+        pkg-config
+        python3
+        python3Packages.pip
+        nodejs
+        nil
+        nixd
+        alejandra
+        fd
+        ripgrep
+        jq
+        tree
+        unzip
+        curl
+        wget
+ 
+      ] ++ runtimeLibs;
+
+      shellHook = ''
+        export EDITOR="nano"
+        export LD_LIBRARY_PATH="${pkgs.lib.makeLibraryPath runtimeLibs}:$LD_LIBRARY_PATH"
+        echo "Coding environment ready."
+      '';
+    };
+
     nixosConfigurations = builtins.listToAttrs (
       map (name: {
         name = name;

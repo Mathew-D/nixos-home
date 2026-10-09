@@ -61,7 +61,7 @@
     libXi
     libxkbcommon
     libGL
-
+    wayland
     #Java
     libXxf86vm
     glib

@@ -47,7 +47,7 @@ in
     libXtst
     glib
     gtk3
-
+    zenity
     #Graphics
     mesa
     libglvnd
