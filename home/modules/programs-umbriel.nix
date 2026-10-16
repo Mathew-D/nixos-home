@@ -17,25 +17,25 @@ let
           mode = "3840x2160";
           scale = 1.5;
           position = [ 0 1147 ];
-          workspaces = 7;
+          workspaces = 2;
         };
         "DP-2" = {
           mode = "2560x1440@165";
           scale = 1.0;
           position = [ 2560 1147 ];
-          workspaces = 6;
+          workspaces = 2;
         };
         "DP-1" = {
           mode = "3840x2160";
           scale = 1.5;
           position = [ 5120 1147 ];
-          workspaces = 5;
+          workspaces = 2;
         };
         "HDMI-A-1" = {
           mode = "1680x1050";
           scale = 1.0;
           position = [ 2640 97 ];
-          workspaces = 9;
+          workspaces = 2;
         };
       };
     };
@@ -55,25 +55,25 @@ let
           mode = "1920x1080";
           scale = 1.0;
           position = [ 4240 1410 ];
-          workspaces = 5;
+          workspaces = 2;
         };
         "DP-2" = {
           mode = "1680x1050";
           scale = 1.0;
           position = [ 0 1440 ];
-          workspaces = 7;
+          workspaces = 2;
         };
         "DP-1" = {
           mode = "2560x1440@180";
           scale = 1.0;
           position = [ 1680 1050 ];
-          workspaces = 6;
+          workspaces = 2;
         };
         "HDMI-A-1" = {
           mode = "1680x1050";
           scale = 1.0;
           position = [ 2153 0 ];
-          workspaces = 9;
+          workspaces = 2;
         };
       };
     };
@@ -93,7 +93,7 @@ let
           mode = "2880x1800@120.000";
           scale = 1.5;
           position = [ 0 0 ];
-          workspaces = 9;
+          workspaces = 2;
         };
       };
     };
@@ -118,7 +118,10 @@ let
   sharedWindowRules = [
     {
       match.app_id = "^foot$";
-      default_floating_size = { width = 0.5; height = 0.5; };
+      default_floating_size = {
+         width = 0.5; height = 0.5;
+          };
+      default_scrolling_extent = 0.5;
     }
     {
       match.app_id = "^(code|thunar|org\\.gnome\\.Nautilus)$";
