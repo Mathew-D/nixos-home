@@ -4,7 +4,7 @@
   imports = [
     ./display/greetd.nix
     ./desktop/niri.nix
-   # ./desktop/umbriel.nix
+    ./desktop/umbriel.nix
    # ./desktop/plasma.nix
     ./users
     ./modules/cli.nix
@@ -29,10 +29,12 @@
       "https://cache.nixos.org/"
       "https://nyx-cache.chaotic.cx/"
       "https://noctalia.cachix.org"
+      "https://umbriel.cachix.org"
     ];
     trusted-public-keys = [
       "nyx-cache.chaotic.cx:dJxTrgMC3V3cFfyIiBQDQorG6k1LsqurH/srpMSq7qk="
       "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+      "umbriel.cachix.org-1:JfNq/2yg2S6D6z4Z2dVSZrZlDPQTKtexB6GAVLD98nw="
     ];
   };
 
@@ -76,6 +78,7 @@ fonts.packages = with pkgs; [
   noto-fonts-cjk-sans
   noto-fonts-color-emoji
   nerd-fonts.roboto-mono
+  corefonts
 ];  
   # Optional but recommended for better app compatibility
   fonts.fontconfig.enable = true;

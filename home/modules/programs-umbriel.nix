@@ -118,7 +118,7 @@ let
   sharedWindowRules = [
     {
       match.app_id = "^foot$";
-      default_width = 0.5;
+      default_floating_size = { width = 0.5; height = 0.5; };
     }
     {
       match.app_id = "^(code|thunar|org\\.gnome\\.Nautilus)$";
@@ -140,7 +140,7 @@ let
     {
       match.app_id = "^org\\.gnome\\.FileRoller$";
       default_floating = true;
-      default_size = [ 920 400 ];
+      default_floating_size_px = { width = 920; height = 400; };
     }
     {
       match.app_id = "^(mpv|io\\.github\\.celluloid_player\\.Celluloid|eog)$";
@@ -149,7 +149,7 @@ let
     {
       match.app_id = "^dev\\.noctalia\\.Noctalia\\.Settings$";
       default_floating = true;
-      default_size = [ 1080 920 ];
+      default_floating_size_px = { width = 1080; height = 920; };
       opacity = 0.9;
     }
   ];
@@ -222,10 +222,10 @@ let
       action = "overview-toggle";
       repeat = false;
     };
-    "Mod+R" = "window-cycle-width";
-    "Mod+A" = "window-set-width:0.333";
-    "Mod+S" = "window-set-width:0.5";
-    "Mod+F" = "window-set-width:1.0";
+    "Mod+R" = "window-cycle-primary-extent";
+    "Mod+A" = "window-set-primary-extent:0.333";
+    "Mod+S" = "window-set-primary-extent:0.5";
+    "Mod+F" = "window-set-primary-extent:1.0";
     "Mod+Left" = "window-focus-left";
     "Mod+Down" = "window-focus-down";
     "Mod+Up" = "window-focus-up";
@@ -288,8 +288,6 @@ in
       };
 
       environment = {
-        XDG_SESSION_TYPE = "wayland";
-        XDG_CURRENT_DESKTOP = "umbriel";
         XDG_SESSION_CLASS = "user";
         ELECTRON_OZONE_PLATFORM_HINT = "wayland";
       };
@@ -302,6 +300,18 @@ in
         accent_secondary = "#31748FFF";
         warning = "#F6C177FF";
         error = "#EB6F92FF";
+        insert_hint = "#31748F80";
+        backdrop = "#000000FF";
+        shadow = "#00000088";
+        border = {
+          focused = "#9CCFD8FF";
+          unfocused = "#524F67FF";
+          outer = "#00000000";
+        };
+        overview = {
+          background_tint = "#524F6788";
+          workspace_background = "#00000044";
+        };
       };
 
       appearance = {
@@ -309,12 +319,6 @@ in
         border_width = 1;
         outer_border_width = 0;
         corner_radius = 16;
-        border_focused = "#9CCFD8FF";
-        border_unfocused = "#524F67FF";
-        outer_border_color = "#00000000";
-        insert_hint_color = "#31748F80";
-        backdrop_color = "#000000FF";
-        animation_ms = 200;
         blur = {
           enabled = true;
           optimized = true;
@@ -330,23 +334,15 @@ in
           softness = 20;
           offset_x = 0;
           offset_y = 10;
-          color = "#00000088";
         };
-      };
-
-      overview = {
-        zoom = 0.5;
-        background_tint = "#524F6788";
-        workspace_background = "#00000044";
       };
 
       layout = {
         mode = "scrolling";
         gap = 16;
-        width_presets = [ 0.5 0.66667 1.0 ];
+        extent_presets = [ 0.333 0.5 0.667 ];
         scrolling = {
-          direction = "horizontal";
-          default_width_fraction = 1.0;
+          default_extent_fraction = 1.0;
           center_underfull_strip = true;
         };
       };

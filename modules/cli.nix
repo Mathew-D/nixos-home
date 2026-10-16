@@ -63,7 +63,8 @@ in
     imagemagick
     
     #Proton
-    unstable.umu-launcher
+    #unstable.umu-launcher
+    umu-launcher
     protonup-rs
 
     (writeShellApplication {

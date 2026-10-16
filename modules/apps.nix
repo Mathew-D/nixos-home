@@ -1,7 +1,18 @@
-{ pkgs, inputs, ... }:
+{ config, lib, pkgs, inputs, ... }:
+
+let
+  unstable = inputs.nixpkgs-unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+in
 
 {
- nixpkgs.overlays = [ inputs.ts3-noweb.overlays.default ];
+  imports = [ inputs.artcraft.nixosModules.default ];
+
+  nixpkgs.overlays = [ inputs.ts3-noweb.overlays.default ];
+  fonts.fontDir.enable = true;
+  #systemd.tmpfiles.rules = [
+  #  "d /usr/share 0755 root root -"
+  #  "L+ /usr/share/fonts - - - - /run/current-system/sw/share/X11/fonts"
+  #];
 
  environment.systemPackages = [
   pkgs._1password-gui
@@ -72,7 +83,10 @@
   inputs.pcloud.packages.x86_64-linux.default
   inputs.devin.packages.x86_64-linux.default
   inputs.bambustudio.packages.x86_64-linux.default
+  inputs.euro-office.packages.${pkgs.stdenv.hostPlatform.system}.default
   pkgs.teamspeak3
+
+
 
   (pkgs.writeShellScriptBin "processing" ''
     export _JAVA_OPTIONS="--add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED --add-opens=java.desktop/java.awt=ALL-UNNAMED"
@@ -80,13 +94,17 @@
   '')
 ];
 #programs.noctalia.enable = true;
-  programs.firefox.enable = true;
 
   #Gaming
   programs = {
+    firefox.enable = true;
     steam = {
       enable = true;
       # gamescopeSession.enable = true;
+    };
+    artcraft = {
+      enable = true;
+      apps = [ "photocraft" ];
     };
   };
 

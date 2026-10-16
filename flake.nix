@@ -2,9 +2,13 @@
   description = "NixOS system";
 
   nixConfig = {
-    extra-substituters = [ "https://noctalia.cachix.org" ];
+    extra-substituters = [
+      "https://noctalia.cachix.org"
+      "https://umbriel.cachix.org"
+    ];
     extra-trusted-public-keys = [
       "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+      "umbriel.cachix.org-1:JfNq/2yg2S6D6z4Z2dVSZrZlDPQTKtexB6GAVLD98nw="
     ];
   };
 
@@ -31,6 +35,11 @@
     url = "git+https://github.com/Mathew-D/bambustudio-nix";
     inputs.nixpkgs.follows = "nixpkgs";
   };
+
+  euro-office = {
+    url = "github:Mathew-D/nix-euro-office";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
   
   pcloud = {
     url = "github:Mathew-D/pcloud-nix";
@@ -38,12 +47,11 @@
   };
 
   umbriel = {
-    url = "git+https://github.com/noctalia-dev/umbriel";
-    inputs.nixpkgs.follows = "nixpkgs";
+    url = "github:noctalia-dev/umbriel/cachix";
   };
 
-  xdg-desktop-portal-umbriel = {
-    url = "github:noctalia-dev/xdg-desktop-portal-umbriel";
+  artcraft = {
+    url = "github:mathew-d/artcraft-nix";
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
