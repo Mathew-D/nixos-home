@@ -7,15 +7,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1792055858,
-        "narHash": "sha256-itYoQKcU8lSoDvbgc2FiztW4C96BgJy43uRHEX+OSKk=",
-        "owner": "ipeglin",
+        "lastModified": 1792031948,
+        "narHash": "sha256-SxX7SuYeMR9eSpAWzzrj0ib8PXxfqvNK7ol+EAj9x1w=",
+        "owner": "mathew-d",
         "repo": "artcraft-nix",
-        "rev": "4ae77f982892d202f2052414bcf4b80fe9fc530d",
+        "rev": "44e0f9b703666b5dd7d3cadb2008e50b4f48c576",
         "type": "github"
       },
       "original": {
-        "owner": "ipeglin",
+        "owner": "mathew-d",
         "repo": "artcraft-nix",
         "type": "github"
       }
