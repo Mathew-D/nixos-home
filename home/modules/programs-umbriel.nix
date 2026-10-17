@@ -17,25 +17,29 @@ let
           mode = "3840x2160";
           scale = 1.5;
           position = [ 0 1147 ];
-          workspaces = 2;
+          workspaces = "dynamic";
+min_workspaces = 1;
         };
         "DP-2" = {
           mode = "2560x1440@165";
           scale = 1.0;
           position = [ 2560 1147 ];
-          workspaces = 2;
+          workspaces = "dynamic";
+min_workspaces = 1;
         };
         "DP-1" = {
           mode = "3840x2160";
           scale = 1.5;
           position = [ 5120 1147 ];
-          workspaces = 2;
+         workspaces = "dynamic";
+min_workspaces = 1;
         };
         "HDMI-A-1" = {
           mode = "1680x1050";
           scale = 1.0;
           position = [ 2640 97 ];
-          workspaces = 2;
+        workspaces = "dynamic";
+min_workspaces = 1;
         };
       };
     };
@@ -55,25 +59,29 @@ let
           mode = "1920x1080";
           scale = 1.0;
           position = [ 4240 1410 ];
-          workspaces = 2;
+         workspaces = "dynamic";
+min_workspaces = 1;
         };
         "DP-2" = {
           mode = "1680x1050";
           scale = 1.0;
           position = [ 0 1440 ];
-          workspaces = 2;
+         workspaces = "dynamic";
+min_workspaces = 1;
         };
         "DP-1" = {
           mode = "2560x1440@180";
           scale = 1.0;
           position = [ 1680 1050 ];
-          workspaces = 2;
+         workspaces = "dynamic";
+min_workspaces = 1;
         };
         "HDMI-A-1" = {
           mode = "1680x1050";
           scale = 1.0;
           position = [ 2153 0 ];
-          workspaces = 2;
+        workspaces = "dynamic";
+min_workspaces = 1;
         };
       };
     };
@@ -93,7 +101,8 @@ let
           mode = "2880x1800@120.000";
           scale = 1.5;
           position = [ 0 0 ];
-          workspaces = 2;
+        workspaces = "dynamic";
+min_workspaces = 1;
         };
       };
     };
@@ -101,19 +110,7 @@ let
 
   profile = profiles.${if hmHost != null && builtins.hasAttr hmHost profiles then hmHost else "main"};
 
-  wsTarget = workspace: output: "${toString workspace}/${output}";
 
-  workspaceSelectors = {
-    ws1 = wsTarget 1 profile.primaryOutput;
-    ws2 = wsTarget 2 profile.primaryOutput;
-    ws3 = wsTarget 3 profile.primaryOutput;
-    ws4 = wsTarget 4 profile.primaryOutput;
-    ws5 = wsTarget 5 profile.chatOutput;
-    ws6 = wsTarget 6 profile.mediaOutput;
-    ws7 = wsTarget 7 profile.mailOutput;
-    ws8 = wsTarget 8 profile.auxOutput;
-    ws9 = wsTarget 9 profile.auxOutput;
-  };
 
   sharedWindowRules = [
     {
@@ -251,24 +248,25 @@ let
     "Mod+Ctrl+J" = "output-focus-down";
     "Mod+Ctrl+K" = "output-focus-up";
     "Mod+Ctrl+L" = "output-focus-right";
-    "Mod+1" = "workspace-switch:${workspaceSelectors.ws1}";
-    "Mod+2" = "workspace-switch:${workspaceSelectors.ws2}";
-    "Mod+3" = "workspace-switch:${workspaceSelectors.ws3}";
-    "Mod+4" = "workspace-switch:${workspaceSelectors.ws4}";
-    "Mod+5" = "workspace-switch:${workspaceSelectors.ws5}";
-    "Mod+6" = "workspace-switch:${workspaceSelectors.ws6}";
-    "Mod+7" = "workspace-switch:${workspaceSelectors.ws7}";
-    "Mod+8" = "workspace-switch:${workspaceSelectors.ws8}";
-    "Mod+9" = "workspace-switch:${workspaceSelectors.ws9}";
-    "Mod+Shift+1" = "window-move-to-workspace:${workspaceSelectors.ws1}";
-    "Mod+Shift+2" = "window-move-to-workspace:${workspaceSelectors.ws2}";
-    "Mod+Shift+3" = "window-move-to-workspace:${workspaceSelectors.ws3}";
-    "Mod+Shift+4" = "window-move-to-workspace:${workspaceSelectors.ws4}";
-    "Mod+Shift+5" = "window-move-to-workspace:${workspaceSelectors.ws5}";
-    "Mod+Shift+6" = "window-move-to-workspace:${workspaceSelectors.ws6}";
-    "Mod+Shift+7" = "window-move-to-workspace:${workspaceSelectors.ws7}";
-    "Mod+Shift+8" = "window-move-to-workspace:${workspaceSelectors.ws8}";
-    "Mod+Shift+9" = "window-move-to-workspace:${workspaceSelectors.ws9}";
+ "Mod+1" = "workspace-switch:1";
+"Mod+2" = "workspace-switch:2";
+"Mod+3" = "workspace-switch:3";
+"Mod+4" = "workspace-switch:4";
+"Mod+5" = "workspace-switch:5";
+"Mod+6" = "workspace-switch:6";
+"Mod+7" = "workspace-switch:7";
+"Mod+8" = "workspace-switch:8";
+"Mod+9" = "workspace-switch:9";
+
+"Mod+Shift+1" = "window-move-to-workspace:1";
+"Mod+Shift+2" = "window-move-to-workspace:2";
+"Mod+Shift+3" = "window-move-to-workspace:3";
+"Mod+Shift+4" = "window-move-to-workspace:4";
+"Mod+Shift+5" = "window-move-to-workspace:5";
+"Mod+Shift+6" = "window-move-to-workspace:6";
+"Mod+Shift+7" = "window-move-to-workspace:7";
+"Mod+Shift+8" = "window-move-to-workspace:8";
+"Mod+Shift+9" = "window-move-to-workspace:9";
     "Mod+WheelUp" = "window-focus-left";
     "Mod+WheelDown" = "window-focus-right";
     "Mod+Shift+WheelUp" = "column-move-left";

@@ -16,7 +16,8 @@ in
     killall
     procps
     btrfs-progs
-
+    ffmpeg-full
+    
     # Modern CLI tools
     fd
     ripgrep

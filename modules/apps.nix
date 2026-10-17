@@ -77,6 +77,9 @@ in
     libXxf86vm
     glib
     libXtst
+    gtk3
+    ffmpeg_6
+    maven
     ]))
 
   inputs.rift.packages.x86_64-linux.default
