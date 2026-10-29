@@ -120,6 +120,9 @@ hardware.graphics = {
 
   # Printing
   services.printing.enable = true;
+  services.printing.drivers = with pkgs; [
+    splix
+  ];
 
   # Use Flatpak for large third-party desktop apps.
   services.flatpak.enable = true;

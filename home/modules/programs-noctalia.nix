@@ -24,7 +24,7 @@
           thickness = 31;
           capsule_group = [
             {
-              fill = "surface_variant";
+              fill = "surface_container";
               id = "g1";
               members = [ "ram" "cpu" "temp" ];
               opacity = 0.0;
@@ -32,7 +32,7 @@
               radius = 6.0;
             }
             {
-              fill = "surface_variant";
+              fill = "surface_container";
               id = "g2";
               members = [ "volume" "input_volume" ];
               opacity = 0.0;
@@ -127,7 +127,7 @@
             rotation = 0.0;
             type = "login_box";
             settings = {
-              background_color = "surface_variant";
+              background_color = "surface_container";
               background_opacity = 0.88;
               background_radius = 12.0;
               input_opacity = 1.0;
@@ -145,7 +145,7 @@
             rotation = 0.0;
             type = "login_box";
             settings = {
-              background_color = "surface_variant";
+              background_color = "surface_container";
               background_opacity = 0.88;
               background_radius = 12.0;
               input_opacity = 1.0;
@@ -163,7 +163,7 @@
             rotation = 0.0;
             type = "login_box";
             settings = {
-              background_color = "surface_variant";
+              background_color = "surface_container";
               background_opacity = 0.88;
               background_radius = 12.0;
               input_opacity = 1.0;
@@ -181,7 +181,7 @@
             rotation = 0.0;
             type = "login_box";
             settings = {
-              background_color = "surface_variant";
+              background_color = "surface_container";
               background_opacity = 0.88;
               background_radius = 12.0;
               input_opacity = 1.0;
@@ -214,7 +214,7 @@
 
         panel = {
           control_center_placement = "floating";
-          session_placement = "centered";
+          session_placement = "floating";
           transparency_mode = "glass";
           wallpaper_placement = "floating";
         };

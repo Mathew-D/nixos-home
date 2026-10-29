@@ -105,10 +105,6 @@ in
       enable = true;
       # gamescopeSession.enable = true;
     };
-    artcraft = {
-      enable = true;
-      apps = [ "photocraft" ];
-    };
   };
 
 }
