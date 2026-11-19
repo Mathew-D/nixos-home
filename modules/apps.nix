@@ -48,13 +48,15 @@ in
   (pkgs.veracrypt.overrideAttrs (old: {
     postFixup = (old.postFixup or "") + ''
       # Install a PNG icon so launchers can use theme lookup instead of VeraCrypt's XPM.
-      install -d "$out/share/icons/hicolor/256x256/apps"
-      ${pkgs.imagemagick}/bin/convert \
-        "$out/share/pixmaps/veracrypt.xpm" \
-        "$out/share/icons/hicolor/256x256/apps/veracrypt.png"
+      if [ -f "$out/share/pixmaps/veracrypt.xpm" ]; then
+        install -d "$out/share/icons/hicolor/256x256/apps"
+        ${pkgs.imagemagick}/bin/convert \
+          "$out/share/pixmaps/veracrypt.xpm" \
+          "$out/share/icons/hicolor/256x256/apps/veracrypt.png"
 
-      substituteInPlace "$out/share/applications/veracrypt.desktop" \
-        --replace-fail "Icon=veracrypt.xpm" "Icon=veracrypt"
+        substituteInPlace "$out/share/applications/veracrypt.desktop" \
+          --replace-fail "Icon=veracrypt.xpm" "Icon=veracrypt"
+      fi
     '';
   }))
  
