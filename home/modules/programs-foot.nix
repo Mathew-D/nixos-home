@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   programs.foot = {
     enable = true;
@@ -9,7 +9,10 @@
         font = "RobotoMono Nerd Font Mono:size=14";
         "selection-target" = "clipboard";
         include = "~/.config/foot/themes/noctalia";
-        shell = "/run/current-system/sw/bin/fish";
+        shell = "${pkgs.writeShellScriptBin "foot-shell" ''
+          ${pkgs.fastfetch}/bin/fastfetch
+          exec ${pkgs.zsh}/bin/zsh -i
+        ''}/bin/foot-shell";
         pad = "10x20";
       };
       csd = {

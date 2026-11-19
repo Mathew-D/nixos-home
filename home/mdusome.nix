@@ -11,6 +11,7 @@ in {
     ./modules/theme.nix
     ./modules/programs-umbriel.nix
     ./modules/programs-noctalia.nix
+    ./modules/programs-zsh.nix
     ./modules/programs-foot.nix
     ./modules/programs-mpv.nix
     ./modules/xdg-config-files.nix
