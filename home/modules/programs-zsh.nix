@@ -10,7 +10,7 @@
       plugins = [ "git" "sudo" "dirhistory" ];
       theme = "robbyrussell";
     };
-    initExtra = ''
+    initContent = ''
       # Fastfetch on startup for interactive shells
       if [[ -o interactive ]] && [[ $TERM != dumb ]]; then
         fastfetch

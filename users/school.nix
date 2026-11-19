@@ -12,6 +12,6 @@
       "wheel"
       "fuse"
     ];
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
   };
 }
