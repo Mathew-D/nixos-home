@@ -116,9 +116,9 @@ min_workspaces = 1;
     {
       match.app_id = "^foot$";
       default_floating_size = {
-         width = 0.5; height = 0.5;
+         width = 0.667; height = 0.667;
           };
-      default_scrolling_extent = 0.5;
+      default_scrolling_extent = 0.667;
     }
     {
       match.app_id = "^(code|thunar|org\\.gnome\\.Nautilus)$";
