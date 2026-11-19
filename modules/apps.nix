@@ -22,7 +22,7 @@ in
   pkgs.celluloid
   pkgs.loupe
   #pkgs.eog #replaced with loupe
-  pkgs.nemo-with-extensions
+
   pkgs.nwg-look
   pkgs.foot
   pkgs.mpv
@@ -89,8 +89,10 @@ in
   inputs.devin.packages.x86_64-linux.default
   inputs.bambustudio.packages.x86_64-linux.default
   inputs.euro-office.packages.${pkgs.stdenv.hostPlatform.system}.default
+
   pkgs.teamspeak3
 
+inputs.luciole.packages.${pkgs.stdenv.hostPlatform.system}.default
 
 
   (pkgs.writeShellScriptBin "processing" ''

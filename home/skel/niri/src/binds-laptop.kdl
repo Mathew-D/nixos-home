@@ -30,7 +30,7 @@ Mod+Alt+P repeat=false {
     // Basic Apps
     Mod+T hotkey-overlay-title="Open Terminal" { spawn "foot"; }
     Mod+Return hotkey-overlay-title="Open Terminal" { spawn "foot"; }
-    Mod+E         { spawn "nemo" "--existing-window" ; }
+    Mod+E         { spawn "luciole" ; }
     Mod+C         { spawn "code"; }
     Mod+B         { spawn-sh "firefox"; }
 

@@ -65,6 +65,10 @@
   noctalia = {
     url = "github:noctalia-dev/noctalia/cachix";
   };
+
+  luciole = {
+    url = "github:noctalia-dev/luciole";
+  };
   };
 
 outputs = { self, nixpkgs, chaotic, ... }@inputs:
