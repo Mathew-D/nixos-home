@@ -114,6 +114,10 @@ min_workspaces = 1;
 
   sharedWindowRules = [
     {
+      match.app_id = "^at\\.yrlf\\.wl_mirror$";
+      default_output = "DP-1";
+    }
+    {
       match.app_id = "^foot$";
       default_floating_size = {
          width = 0.667; height = 0.667;
@@ -193,7 +197,7 @@ min_workspaces = 1;
       action = "spawn:foot";
       repeat = false;
     };
-    "Mod+E" = { action = "spawn:nemo --existing-window"; };
+    "Mod+E" = { action = "spawn:luciole"; };
     "Mod+C" = { action = "spawn:code"; };
     "Mod+B" = { action = "spawn:firefox"; };
     "Print" = { action = "spawn:noctalia msg screenshot-region"; };
@@ -363,7 +367,6 @@ in
 
       keybinds = {
         "Mod+Return" = "spawn foot";
-        "Mod" = "spawn noctalia msg panel-toggle launcher";
         "Mod+Q" = "window-close";
         "Mod+Escape" = "session-quit";
         "Mod+H" = "window-focus-left";
@@ -414,6 +417,8 @@ in
         "Mod+W" = "spawn noctalia msg panel-toggle wallpaper";
         "Mod+X" = "spawn noctalia msg bar-toggle";
         "Mod+grave" = "spawn noctalia msg mic-mute";
+        "Mod+Alt+P" = "spawn wl-mirror --fullscreen-output DP-1 eDP-1";
+
         Print = "spawn noctalia msg screenshot-region";
         "Ctrl+Print" = "spawn noctalia msg screenshot-fullscreen";
         "Alt+Print" = "spawn noctalia msg screenshot-region";
