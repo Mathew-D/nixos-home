@@ -24,7 +24,7 @@
     };
 
   noctalia-greeter = {
-    url = "github:noctalia-dev/noctalia-greeter";
+    url = "github:noctalia-dev/noctalia-greeter/cachix";
     inputs.nixpkgs.follows = "nixpkgs";
   };
 

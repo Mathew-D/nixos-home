@@ -86,8 +86,8 @@ fonts.packages = with pkgs; [
   # Clean up old generations
   nix.gc = {
   automatic = true;
-  dates = "weekly";
-  options = "--delete-older-than 14d";
+  dates = "daily";
+  options = "--delete-older-than 7d";
 };
 
   time.timeZone = "America/Toronto";

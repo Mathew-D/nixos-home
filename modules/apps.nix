@@ -44,6 +44,7 @@ in
   pkgs.gedit
   pkgs.gnome-disk-utility
   pkgs.librewolf
+  pkgs.just
   
   (pkgs.veracrypt.overrideAttrs (old: {
     postFixup = (old.postFixup or "") + ''

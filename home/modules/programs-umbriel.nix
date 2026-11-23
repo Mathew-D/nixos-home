@@ -363,6 +363,9 @@ in
           follows_mouse = "sloppy";
           follows_mouse_max_scroll = 0.0;
         };
+        touch = {
+          output = "eDP-1";
+        };
       };
 
       keybinds = {
