@@ -1,13 +1,13 @@
 { config, pkgs, lib, ... }:
 
-let
-  localIshFirmware = /etc/nixos/local-firmware/ishS_MEU_aligned.bin;
-  hasLocalIshFirmware = builtins.pathExists localIshFirmware;
+#let
+#  localIshFirmware = /etc/nixos/local-firmware/ishS_MEU_aligned.bin;
+#  hasLocalIshFirmware = builtins.pathExists localIshFirmware;
 
-  ish-fw = if hasLocalIshFirmware then pkgs.runCommand "intel-ish-firmware" { src = localIshFirmware; } ''
-    install -Dm644 "$src" \
-      $out/lib/firmware/intel/ish/ish_lnlm.bin
-  '' else null;
+#  ish-fw = if hasLocalIshFirmware then pkgs.runCommand "intel-ish-firmware" { src = localIshFirmware; } ''
+#    install -Dm644 "$src" \
+#      $out/lib/firmware/intel/ish/ish_lnlm.bin
+#  '' else null;
 in
 
 {
@@ -33,11 +33,14 @@ in
 
 #  hardware.enableAllFirmware = true;
 
-  warnings = lib.optional (!hasLocalIshFirmware) ''
-    Intel ISH firmware not found at ${toString localIshFirmware}. Place the blob there to enable it on laptop.
-  '';
+#  warnings = lib.optional (!hasLocalIshFirmware) ''
+#    Intel ISH firmware not found at ${toString localIshFirmware}. Place the blob there to enable it on laptop.
+#  '';
 
-  hardware.firmware = lib.optional hasLocalIshFirmware ish-fw;
+#  hardware.firmware = lib.optional hasLocalIshFirmware ish-fw;
+hardware.firmware = [
+    (pkgs.callPackage ./packages/intel-ish-firmware.nix {})
+  ];
 swapDevices = [
     {
       device = "/swapfile";

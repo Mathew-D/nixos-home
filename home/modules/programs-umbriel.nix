@@ -364,7 +364,7 @@ in
           follows_mouse_max_scroll = 0.0;
         };
         touch = {
-          output = "eDP-1";
+          map_to_output = "eDP-1";
         };
       };
 

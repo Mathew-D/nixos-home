@@ -5,21 +5,19 @@
     extra-substituters = [
       "https://noctalia.cachix.org"
       "https://umbriel.cachix.org"
-      "https://luciole.cachix.org"
     ];
     extra-trusted-public-keys = [
       "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
       "umbriel.cachix.org-1:JfNq/2yg2S6D6z4Z2dVSZrZlDPQTKtexB6GAVLD98nw="
-      "luciole.cachix.org-1:wRw9cH+O+k4Xs/Jl2rZ/LTx4LA7C6X3J5c5x8jyR4Dk="
     ];
   };
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     home-manager = {
-      url = "github:nix-community/home-manager/release-26.05";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -69,7 +67,7 @@
   };
 
   luciole = {
-    url = "github:noctalia-dev/luciole";
+    url = "github:noctalia-dev/luciole/cachix";
   };
   };
 

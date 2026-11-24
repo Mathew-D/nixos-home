@@ -7,6 +7,8 @@
 
   programs.home-manager.enable = true;
 
+  home.pointerCursor.enable = true;
+
   home.packages = with pkgs; [
     fastfetch
   ];

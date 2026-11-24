@@ -27,11 +27,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793826139,
-        "narHash": "sha256-UcHpNbDesyivDhHNIIxMSbO2pi/nG7U88ygTTJYdXt0=",
+        "lastModified": 1795480212,
+        "narHash": "sha256-jtnvGsLUPWAKgvkVesRlTXv3ANq/JpuZ9IldRtl+rK4=",
         "ref": "refs/heads/main",
-        "rev": "bd6a858b6474416a016164507b23e6790ac05e24",
-        "revCount": 3,
+        "rev": "930edab910977d198acf23e9188211537c344e66",
+        "revCount": 4,
         "type": "git",
         "url": "https://github.com/Mathew-D/bambustudio-nix"
       },
@@ -69,11 +69,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1795124157,
-        "narHash": "sha256-NNtk3L+gU3aPC1xD1DEBBnYefN83j/G8OCMtgjT8ua8=",
+        "lastModified": 1795466057,
+        "narHash": "sha256-5xKorAdPK6BK5jv5f5XWWw/urva4jmH7794di+cuUHc=",
         "owner": "Mathew-D",
         "repo": "devin-desktop-nix",
-        "rev": "f643148df534e5c9bf1bbf39747556b6d2bca07b",
+        "rev": "dc99797a5ab67cfb42ce10097babcbaa99d3ffb9",
         "type": "github"
       },
       "original": {
@@ -181,16 +181,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1795325060,
-        "narHash": "sha256-XYoMPsqRFZ6jOaYI1KAAu8fzqif4tkCX8mhEKrViDXQ=",
+        "lastModified": 1795366757,
+        "narHash": "sha256-Tp4Kh4R7ID1f2mMCDlb2PiFQ/DZZsnXB2u2juWN+TT4=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "6480d7d8533b88c78cc6dcda395ab89cd546e450",
+        "rev": "3b8140d21fa0a70b1b38c2ed29853dfe686234a6",
         "type": "github"
       },
       "original": {
         "owner": "nix-community",
-        "ref": "release-26.05",
         "repo": "home-manager",
         "type": "github"
       }
@@ -200,15 +199,16 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1795445992,
-        "narHash": "sha256-+xmxQxu2chAeWNv59c0v+oUBWMWP8RXTlMhMd5TfFIo=",
+        "lastModified": 1795476942,
+        "narHash": "sha256-ht7gmeV6bbaC7nIbUUBvz/qq6Wl+n0SE7DdRPx9TQbs=",
         "owner": "noctalia-dev",
         "repo": "luciole",
-        "rev": "74cbfa8baade95ae703367a7c3f5d32419b2527a",
+        "rev": "4ba978e05b45a91b8a60847550430d93f06e2956",
         "type": "github"
       },
       "original": {
         "owner": "noctalia-dev",
+        "ref": "cachix",
         "repo": "luciole",
         "type": "github"
       }
@@ -272,16 +272,16 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1795370043,
-        "narHash": "sha256-s/0jq8usZtLVOolYBwmyUmd3JsfAu7w3FU+a0dgMqSY=",
+        "lastModified": 1795234589,
+        "narHash": "sha256-f/VVvxf5RsQgWVhUtefoca5ktVg0DA2bnkMOcmSnozo=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "0dc498bfe49baeb18b0f9891e800b53bb2603193",
+        "rev": "2786a2a72088ecf32aea5b3ec52099e6a7cff78f",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "nixos-26.05",
+        "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -333,11 +333,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1795380300,
-        "narHash": "sha256-g6WR2tlbq29YFDSwLmrdubzqoJqvLn3/JaO6IyS8ieg=",
+        "lastModified": 1795472103,
+        "narHash": "sha256-Xws5YZ/9XhQUvNMCfht2f6iGibnb2OoKzhsGEyoETWs=",
         "owner": "noctalia-dev",
         "repo": "noctalia",
-        "rev": "30daf36c1e7729ac29fa787b48bc2af136689635",
+        "rev": "455d753c5f9bf4d067bd346ebf41e4d46738042d",
         "type": "github"
       },
       "original": {
@@ -363,6 +363,7 @@
       },
       "original": {
         "owner": "noctalia-dev",
+        "ref": "cachix",
         "repo": "noctalia-greeter",
         "type": "github"
       }
@@ -374,11 +375,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793826306,
-        "narHash": "sha256-UUqFXVlCBNFExUsgAEmUUp920jBRLvYsjRaDNYKu6ys=",
+        "lastModified": 1795480094,
+        "narHash": "sha256-0xhvXBDrCWSEq+svj5CSNX7PFTPquk8OboZUeAi5yh4=",
         "owner": "Mathew-D",
         "repo": "pcloud-nix",
-        "rev": "4a01c236b169df1c0e9fd85af91f519148b4c5d4",
+        "rev": "13bc20f4f4f39d54a0f33a5dbe549289ab3658bf",
         "type": "github"
       },
       "original": {
@@ -394,11 +395,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793828264,
-        "narHash": "sha256-98OwVYrCRO7vtgQvhgtEAobeCt/JtuJyg91gnUsI0VY=",
+        "lastModified": 1795480670,
+        "narHash": "sha256-5lyn2aIOzozhBxfuf5roAMEfoLedxwK3+RP+DOgp7PU=",
         "owner": "Mathew-D",
         "repo": "rift-nix",
-        "rev": "cc1dab425d74fee041facb30adc5685a718792e1",
+        "rev": "ba699872abe18c2284e673f2680d8ad27c40f7a8",
         "type": "github"
       },
       "original": {

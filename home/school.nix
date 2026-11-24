@@ -7,4 +7,6 @@
 
   home.username = lib.mkForce "school";
   home.homeDirectory = lib.mkForce "/home/school";
+
+  home.pointerCursor.enable = true;
 }
